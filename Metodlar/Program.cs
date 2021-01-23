@@ -7,11 +7,7 @@ namespace Metodlar
         static void Main(string[] args)
         {
 
-            string urunAdi = "elma";
-            double fiyati = 15;
-            string aciklama = "Amasya Elması";
-
-            string[] meyveler = new string[] { };
+            
 
             Urun urun1 = new Urun();
             urun1.Adi = "elma";
@@ -28,15 +24,24 @@ namespace Metodlar
 
             foreach (Urun urun in urunler)
             {
-
+                Console.WriteLine(urun.Adi);
+                Console.WriteLine(urun.Fiyat);
+                Console.WriteLine(urun.Aciklama);
+                Console.WriteLine("----------------");
             }
 
 
+            Console.WriteLine("-------------Metotlar-----------");
 
-          
+            //instance-örnek
+            //encapsulation
+            SepetManager sepetManager = new SepetManager();
+            sepetManager.Ekle(urun1);
+            sepetManager.Ekle(urun2);
 
-
-            Console.WriteLine("Hello World!");
+            sepetManager.Ekle2("Armut", "Yeşil Armut", 12, 10);
+            sepetManager.Ekle2("Elma", "Kırmızı Elma", 12, 9);
+            sepetManager.Ekle2("Karpuz", "Diyarbakır Karpuzu", 12, 8);
         }
     }
 }

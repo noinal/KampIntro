@@ -6,5 +6,17 @@ namespace Metodlar
 {
     class SepetManager
     {
+        //naming convention
+
+        public void Ekle(Urun urun)
+        {
+            Console.WriteLine("Tebrikler.Sepete ekledi : " + urun.Adi);
+
+        }
+        public void Ekle2(string urunAdi, string aciklama, double fiyat, int stokAdedi)
+
+        {
+            Console.WriteLine("Tebrikler.Sepete Eklendi : " + urunAdi);
+        }
     }
 }
